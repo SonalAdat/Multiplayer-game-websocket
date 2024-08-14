@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Multiplayer Tic Tac Toe Game</title>
+</head>
+<body>
+
+<div class="area">
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div>
+<div class="container">
+   
+    <h1 class="title">Tic Tac Toe Game</h1>
+    <div class="inputBox">
+
+        <div class="newGame">
+            <button id="btnCreate">New Game</button><br>
+        </div>
+      
+        <div class="verticalInputBox">
+            <button id="btnJoin" >Join Game</button><br>
+            <input type="text"  id="txtGameId">
+        </div>
+
+    </div>
+   
+    <br>
+    <div class="displayButton">
+        <button id="winnerShow" onclick="showWinner()">Leaderboard</button>
+        <button id="playShow" onclick="showPlay()">Play game</button>
+    </div>
+   
+    <br>
+    <label for="txtNickName"  id="labelNickname">Enter Your Nickname:-  </button>
+    <input type="text" id="txtNickName" >
+    <p id="id"></p>
+    <div class="row board">
+        <table class="heading">
+            <thead><th colspan="2">Player Name</th></thead>
+            <tr id="divPlayers"></div>
+            <tr id="divOptions"></div>
+        </table>
+        
+        <div id="divBoard"></div>
+    </div>
+    <div id="winnerStack">
+        
+    </div>
+  
+
+    <!-- <div class="reset">
+        <button id="reset">Reset</button>
+    </div> -->
+</div>
+
+
+
+<div class="winner">
+      <p id="result">Pranav is winner</p>
+      <button id="restart">Restart Game</button>
+</div>
+    
+
+<script  src="client.js"></script>
+</body>
+</html>
+
