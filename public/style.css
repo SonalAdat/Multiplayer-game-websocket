@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Lato:wght@300&display=swap");
+
+:root {
+  --bg-color: #fefeff;
+  --primary-color: #4a6884;
+  --secondary-color: #3a98d4;
+  --tertiary-color: #65c6eb;
+  --gray-color: #91a2ab;
+  --light-color: #f0f4fe;
+  --win-background-color: rgba(214, 230, 234, 0.9);
+  --title: #f8c27a;
+  --textShadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+  --boxShadow: 0 0px 10px rgba(0, 0, 0, 0.2);
+}
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: content-box;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  font-size: 14px;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+
+.area{
+  z-index: -1;
+}
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.305);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: var(--boxShadow);
+  display: block;
+}
+
+.title{
+  margin-bottom: 20px;
+  text-shadow: var(--textShadow);
+  display: inline-block;
+}
+
+.heading{
+  width: 150px;
+  height: 50px;
+}
+
+label{
+  font-weight: bold;
+}
+
+#restart{
+  width:200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+#result {
+  margin-bottom: 30px;
+  color: hsla(0, 0%, 0%, .9);
+  font: normal 100px Varela Round, sans-serif;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.winner{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.2);
+  flex-direction: column;
+}
+
+#divPlayers,#divOptions{
+  width: 100%;
+  height: 50%;
+  font-weight: 400; 
+}
+
+#divBoard {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repate(3,1fr);
+  width: 250px;
+}
+
+#txtGameId{
+  width: 100px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 75px;
+  margin: 2px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(240, 240, 240);
+}
+
+.btn:disabled {
+  color: black;
+  cursor: no-drop;
+}
+
+#btnJoin{
+  margin-bottom: 10px;
+}
+
+.inputBox {
+  background-color: #96e6a1;
+  padding: 25px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.inputBox > label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.newGame{
+  width: 50%;
+  display: flex;
+}
+
+.verticalInputBox{
+  width: 50%;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  padding: 3px 20px;
+  border-radius: 5px;
+}
+
+button {
+  background-color: teal;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background-color: rgb(0, 184, 184);
+}
+.displayButton{
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 250px;
+  margin:20px 0px;
+  border: 2px solid #adadad;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  border: 1px solid #adadad;
+  padding: 1px 24px;
+  text-align: center;
+}
+
+
+thead th {
+  background-color: teal;
+  color: #fff;
+  width: 25%;
+}
+
+/* tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #e9ecef;
+} */
+
+#winnerStack{
+  display: flex;
+  justify-content: center;
+}
